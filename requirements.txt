@@ -1,7 +1,6 @@
 pyfiglet
 requests
 asyncio
-json
 threading
 datetime
 telethon
