@@ -41,17 +41,6 @@ print('  ')
 
 filename = 'sython.json'
 
-try:
-    with open(filename, 'r') as f:
-        data = json.load(f)
-        api_id = data['api_id']
-        api_hash = data['api_hash']
-        bot_token = data['bot_token']
-        DEVLOO = data['DEVLOO']
-        MAX_ACCOUNTS = data['MAX_ACCOUNTS']
-        user_bot = data['user_bot']
-        id_bot = data['id_bot']
-except FileNotFoundError:
      api_id = Config.APP_ID
      api_hash = Config.API_HASH
      bot_token = Config.TG_BOT_TOKEN
@@ -60,21 +49,7 @@ except FileNotFoundError:
      user_bot = Config.user_bot
      id_bot = Config.id_bot
     
-    data = {
-        'api_id': api_id,
-        'api_hash': api_hash,
-        'bot_token': bot_token,
-        'DEVLOO': DEVLOO,
-        'MAX_ACCOUNTS': MAX_ACCOUNTS,
-        'user_bot': user_bot,
-        'id_bot': id_bot
-    }
-    
-    with open(filename, 'w') as f:
-        json.dump(data, f)
 
-
-print(A+'═'*60)
 bot = TelegramClient('bot', api_id, api_hash).start(bot_token=bot_token)
 
 
