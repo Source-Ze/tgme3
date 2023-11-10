@@ -1,4 +1,7 @@
-pyrogram
+pyfiglet
 requests
-pyromod
-kvsqlite
+asyncio
+json
+threading
+datetime
+telethon
