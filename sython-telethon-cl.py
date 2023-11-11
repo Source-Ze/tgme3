@@ -25,7 +25,7 @@ import asyncio
 
 #------------------------ vars -------------------------#
 # -
-# - SYTHOM TEAM 
+# - ZE TEAM 
 # -
 
 A = '\033[1;34m'#ازرق
@@ -43,7 +43,7 @@ filename = 'sython.json'
 
 
 print(A+'═'*60)
-bot = TelegramClient('bot', api_id=21627756, api_hash="fe77fbf0cae9f7f5ece37659e2466cf1").start(bot_token="6769330223:AAF_F7yyyTGf-i6aOSqMgMLlbCQHyEdwVmk")
+bot = TelegramClient('bot', api_id=Config.APP_ID, api_hash=Config.API_HASH).start(bot_token=Config.TG_BOT_TOKEN)
 
 
 #------------------ defult vars ---------------------# 
@@ -126,7 +126,7 @@ async def start(event):
         [Button.inline('اخر ﹝6﹞ رسائل ⩨', 'f4or3wa1rd'), Button.inline('ارسال رسالة ⛣', 's6e43n6d')],
         [Button.inline('نقر زر شفاف ✧', 'ba4utt2on'), Button.inline('عدد الحسابات ꐕ', "bbuttoon08")],
         [Button.inline('⬩ مسح بيانات البوت ⬩', 'format')],    
-         [Button.inline('༺ 𝗧𝗘𝗣𝗧𝗛𝗢𝗡 𝗕𝗢𝗧 ༻', 'button0')]
+         [Button.inline('༺ 🔱 𝐒𝐎𝐔𝐑𝐂𝐄 • 𝐙𝐄 🔱𝗧 ༻', 'button0')]
         ]
         await bot.send_message(chat, '''**╭─╮ ┬┈┬ ╭┬╮ ┬┈┬ ╭─╮ ╭╮╭  
 ╰─╮ ╰┬╯ ┈│┈ ├─┤ │┈│ │││  
@@ -163,7 +163,7 @@ async def back(event):
         [Button.inline('اخر ﹝6﹞ رسائل ⩨', 'f4or3wa1rd'), Button.inline('ارسال رسالة ⛣', 's6e43n6d')],
         [Button.inline('نقر زر شفاف ✧', 'ba4utt2on'), Button.inline('عدد الحسابات ꐕ', "bbuttoon08")],
         [Button.inline('⬩ مسح بيانات البوت ⬩', 'format')],    
-         [Button.inline('༺ 𝗧𝗘𝗣𝗧𝗛𝗢𝗡 𝗕𝗢𝗧༻', 'button0')]
+         [Button.inline('༺ 🔱 𝐒𝐎𝐔𝐑𝐂𝐄 • 𝐙𝐄 🔱༻', 'button0')]
         ]
         await event.edit("""**╭─╮ ┬┈┬ ╭┬╮ ┬┈┬ ╭─╮ ╭╮╭  
 ╰─╮ ╰┬╯ ┈│┈ ├─┤ │┈│ │││  
@@ -326,7 +326,7 @@ async def start(event):
         [Button.inline('رشـــق قناة ⊕', 'aibo'), Button.inline('مغادرة قناة ⊖', 'ajbo')],
         [Button.inline('رشق مشاهدات ⟐', 'akbo')],
         
-         [Button.inline('༺ 𝗧𝗘𝗣𝗧𝗛𝗢𝗡 𝗕𝗢𝗧༻', 'button0')]
+         [Button.inline('༺ 🔱 𝐒𝐎𝐔𝐑𝐂𝐄 • 𝐙𝐄 🔱༻', 'button0')]
         ]
         await bot.send_message(chat, '''**╭─╮ ┬┈┬ ╭┬╮ ┬┈┬ ╭─╮ ╭╮╭  
 ╰─╮ ╰┬╯ ┈│┈ ├─┤ │┈│ │││  
@@ -1036,5 +1036,5 @@ bot.loop.create_task(update_days())
 bot.run_until_disconnected()
 
 
-# • Sython Team - Controller Bot • #
+# • ZE Team - Controller Bot • #
 
