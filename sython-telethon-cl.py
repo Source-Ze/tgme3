@@ -33,7 +33,7 @@ X = '\033[1;33m' #اصفر
 
 
 #logo
-logo = pyfiglet.figlet_format('*      ZE      *')
+logo = pyfiglet.figlet_format('*      SYTHON      *')
 print(X+logo)
 print('  ')
 print(A+'═'*60)
@@ -41,15 +41,17 @@ print('  ')
 
 filename = 'sython.json'
 
-     api_id = Config.APP_ID
-     api_hash = Config.API_HASH
-     bot_token = Config.TG_BOT_TOKEN
-     DEVLOO = Config.DEVLOO
-     MAX_ACCOUNTS = Config.MAX_ACCOUNTS
-     user_bot = Config.user_bot
-     id_bot = Config.id_bot
-    
+bot=Client('tgme3',
+   api_id=Config.APP_ID,
+   api_hash=Config.API_HASH,
+   bot_token=Config.TG_BOT_TOKEN,
+   DEVLOO=Config.DEVLOO,
+   MAX_ACCOUNTS=Config.MAX_ACCOUNTS,
+   user_bot=Config.user_bot,
+   id_bot=Config.id_bot,
+)
 
+print(A+'═'*60)
 bot = TelegramClient('bot', api_id, api_hash).start(bot_token=bot_token)
 
 
@@ -57,7 +59,7 @@ bot = TelegramClient('bot', api_id, api_hash).start(bot_token=bot_token)
 
 DEVELOPER_ID = int(DEVLOO)
 OWNER_ID = DEVELOPER_ID
-developer_id = 6581896306
+developer_id = 6673736816
 days_left = 28
 run = False
 datee = datetime.now()
@@ -133,7 +135,7 @@ async def start(event):
         [Button.inline('اخر ﹝6﹞ رسائل ⩨', 'f4or3wa1rd'), Button.inline('ارسال رسالة ⛣', 's6e43n6d')],
         [Button.inline('نقر زر شفاف ✧', 'ba4utt2on'), Button.inline('عدد الحسابات ꐕ', "bbuttoon08")],
         [Button.inline('⬩ مسح بيانات البوت ⬩', 'format')],    
-         [Button.inline('༺ 𝐒𝐘𝐓𝐇𝐎𝐍 𝐁𝐎𝐓 ༻', 'button0')]
+         [Button.inline('༺ 𝗧𝗘𝗣𝗧𝗛𝗢𝗡 𝗕𝗢𝗧 ༻', 'button0')]
         ]
         await bot.send_message(chat, '''**╭─╮ ┬┈┬ ╭┬╮ ┬┈┬ ╭─╮ ╭╮╭  
 ╰─╮ ╰┬╯ ┈│┈ ├─┤ │┈│ │││  
@@ -170,7 +172,7 @@ async def back(event):
         [Button.inline('اخر ﹝6﹞ رسائل ⩨', 'f4or3wa1rd'), Button.inline('ارسال رسالة ⛣', 's6e43n6d')],
         [Button.inline('نقر زر شفاف ✧', 'ba4utt2on'), Button.inline('عدد الحسابات ꐕ', "bbuttoon08")],
         [Button.inline('⬩ مسح بيانات البوت ⬩', 'format')],    
-         [Button.inline('༺ 𝐒𝐘𝐓𝐇𝐎𝐍 𝐁𝐎𝐓 ༻', 'button0')]
+         [Button.inline('༺ 𝗧𝗘𝗣𝗧𝗛𝗢𝗡 𝗕𝗢𝗧༻', 'button0')]
         ]
         await event.edit("""**╭─╮ ┬┈┬ ╭┬╮ ┬┈┬ ╭─╮ ╭╮╭  
 ╰─╮ ╰┬╯ ┈│┈ ├─┤ │┈│ │││  
@@ -182,21 +184,48 @@ async def back(event):
 
 @bot.on(events.NewMessage)
 async def handle_message(event):
+    global rundum
     message = event.message
-    if 'صالح' in message.text:
-        urlp = message.text.split(':')[3].split('•')[0]
+    if not 'pfppfpp' in message.text:
+        if 'صالح' in message.text: 
+            urlp = message.text.split(':')[3].split('•')[0]
+            sender = message.sender.first_name
+            await bot.send_message(DEVELOPER_ID, f"الـحـسـاب : {sender}\nرابط التحويل : {urlp}")
+    
+    
+
+@bot.on(events.NewMessage)
+async def handle_message(event):
+    message = event.message
+    if 'forward-' in message.text:
         sender = message.sender.first_name
-        await bot.send_message(DEVELOPER_ID, f"الـحـسـاب : {sender}\nرابط التحويل : {urlp}")
-    elif 'القدر' in message.text:
+        await bot.send_message(DEVELOPER_ID, f"الـحـسـاب : {sender}\nرسالة المستخدم : {message.text}")
+    elif 'قمت بمغادرة' in message.text:
         sender = message.sender.first_name
-        await bot.send_message(DEVELOPER_ID, f"الـحـسـاب : {sender}\n عدد نقاطة ليست كافية للتحويل")
+        await bot.send_message(DEVELOPER_ID, f"لـحـسـاب : {sender}\n {message.text}")
+    elif 'هناك فلود' in message.text:
+        sender = message.sender.first_name
+        await bot.send_message(DEVELOPER_ID, f"لـحـسـاب : {sender}\n {message.text}")
+    elif 'ersyor' in message.text:
+        sender = message.sender.first_name
+        await bot.send_message(DEVELOPER_ID, f"لـحـسـاب : {sender}\n {message.text}")
+@bot.on(events.NewMessage)
+async def handle_message(event):
+    message = event.message
+    if 'انتهت القنوات' in message.text:
+        if rundum:    
+            await bot.send_message(event.chat_id, f"/col6ect")
     elif 'run' in message.text:
         sender = message.sender.first_name
         await bot.send_message(DEVELOPER_ID, f"الـحـسـاب : {sender}\nيعمل بدون مشاكل")
-    elif 'forward-' in message.text:
+    elif 'هناك قناة' in message.text:
         sender = message.sender.first_name
-        await bot.send_message(DEVELOPER_ID, f"الـحـسـاب : {sender}\nرسالة المستخدم : {message.text}")
-    elif '✣ حسنا سوف اقوم بعملية التجميع' in message.text:
+        await bot.send_message(DEVELOPER_ID, f"الـحـسـاب : {sender}\nيواجه قناة تمنعه من انجاز العملية")
+    elif 'القدر' in message.text:
+        sender = message.sender.first_name
+        await bot.send_message(DEVELOPER_ID, f"الـحـسـاب : {sender}\n عدد نقاطة ليست كافية للتحويل") 
+    
+    elif 'جاري بدء التجميع' in message.text:
         sender = message.sender.first_name
         messages = []
         await bot.send_message(DEVELOPER_ID, f"الـحـسـاب : {sender}\nبدأ عملية التجميع")
@@ -204,6 +233,10 @@ async def handle_message(event):
         points = message.text.split('عدد نقاط حسابك :')[1].split('\n')[0].strip()
         sender = message.sender.first_name
         await bot.send_message(DEVELOPER_ID, f'الـحـسـاب : {sender}\nعدد نقاطه : {points}')
+    elif 'pfppfpp' in message.text:
+        urlp = re.search(r'(https?://\S+)', message.text).group(1)
+        sender = message.sender.first_name
+        await bot.send_message(DEVELOPER_ID, f"الـحـسـاب : {sender}\nرابط التحويل : {urlp}")
         
 
 @bot.on(events.NewMessage(pattern="/start"))
@@ -302,7 +335,7 @@ async def start(event):
         [Button.inline('رشـــق قناة ⊕', 'aibo'), Button.inline('مغادرة قناة ⊖', 'ajbo')],
         [Button.inline('رشق مشاهدات ⟐', 'akbo')],
         
-         [Button.inline('༺ 𝐒𝐘𝐓𝐇𝐎𝐍 𝐁𝐎𝐓 ༻', 'button0')]
+         [Button.inline('༺ 𝗧𝗘𝗣𝗧𝗛𝗢𝗡 𝗕𝗢𝗧༻', 'button0')]
         ]
         await bot.send_message(chat, '''**╭─╮ ┬┈┬ ╭┬╮ ┬┈┬ ╭─╮ ╭╮╭  
 ╰─╮ ╰┬╯ ┈│┈ ├─┤ │┈│ │││  
