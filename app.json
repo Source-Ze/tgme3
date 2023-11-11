@@ -20,23 +20,7 @@
         },
         "APP_ID": {
             "description": "Your APP ID from my.telegram.org",
-            "value": ""
-        },
-        "DEVLOO": {
-            "description": "your id",
-            "value": ""
-        },
-        "MAX_ACCOUNTS": {
-            "description": "Your accounts number",
-            "value": ""
-        },
-        "user_bot": {
-            "description": "bot user",
-            "value": ""
-        },
-        "id_bot": {
-            "description": "bot id",
-            "value": ""                                                
+            "value": ""            
 	   }
 	},
 	"buildpacks": [

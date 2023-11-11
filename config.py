@@ -8,10 +8,4 @@ class Config(object):
 
     API_HASH = os.environ.get("API_HASH", "fe77fbf0cae9f7f5ece37659e2466cf1")
 
-    DEVLOO = os.environ.get("DEVLOO", "")
     
-    MAX_ACCOUNTS = os.environ.get("MAX_ACCOUNTS", "")
-    
-    user_bot = os.environ.get("user_bot", "")
-    
-    id_bot = os.environ.get("id_bot", "")

@@ -1,1 +1,1 @@
-bot: python -m sython-telethon-cl
+bot: python -m ze-telethon-cl
