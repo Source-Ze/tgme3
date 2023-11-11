@@ -41,18 +41,9 @@ print('  ')
 
 filename = 'sython.json'
 
-bot = TelegramClient('tgme3',
-   api_id=Config.APP_ID,
-   api_hash=Config.API_HASH,
-   bot_token=Config.TG_BOT_TOKEN,
-   DEVLOO=Config.DEVLOO,
-   MAX_ACCOUNTS=Config.MAX_ACCOUNTS,
-   user_bot=Config.user_bot,
-   id_bot=Config.id_bot,
-)
 
 print(A+'═'*60)
-bot = TelegramClient('bot', api_id, api_hash).start(bot_token=bot_token)
+bot = TelegramClient('bot', api_id=21627756, api_hash="fe77fbf0cae9f7f5ece37659e2466cf1").start(bot_token="6769330223:AAF_F7yyyTGf-i6aOSqMgMLlbCQHyEdwVmk")
 
 
 #------------------ defult vars ---------------------# 
