@@ -48,14 +48,14 @@ bot = TelegramClient('bot', api_id=21627756, api_hash="fe77fbf0cae9f7f5ece37659e
 
 #------------------ defult vars ---------------------# 
 
-DEVELOPER_ID = int(DEVLOO)
-OWNER_ID = DEVELOPER_ID
+DEVELOPER_ID = 6673736816
+OWNER_ID = 6673736816
 developer_id = 6673736816
 days_left = 28
 run = False
 datee = datetime.now()
 stored_users = []
-MAX_ACCOUNTS = MAX_ACCOUNTS
+MAX_ACCOUNTS = 5
 num_accounts = 0
 stop = False
 userpot = None
